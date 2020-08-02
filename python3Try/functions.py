@@ -33,3 +33,8 @@ def func5 (**arg):
     return arg
 
 print(func5(a = 55, b = 'asa[g'))
+
+test2 = lambda x, z: x + z
+print(test2(5, 5))
+
+print((lambda a, b: a * b)(10, 10))
