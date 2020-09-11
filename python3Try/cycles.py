@@ -5,6 +5,6 @@ while i > 100:
 
 for j in 'Hello world':
     if j == 'a':
-        break # also continue
+        break  # also continue
 else:
     print('Letter "a" not in string')
