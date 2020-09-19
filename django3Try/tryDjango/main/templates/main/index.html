@@ -1,13 +1,13 @@
 {% extends 'main/layout.html' %}
 
 {% block title %}
-    Main page
+    {{ title }}
 {% endblock %}
 
 {% block content %}
     <div class="features">
         <h1>
-            Main page
+            {{ title }}
         </h1>
         <p>
             1337, L33T, L33T speak (leet — elite) — интернет-язык маленьких геймеров и хакеров годов 2000-ых. Абсолютно нечитабелен в устной речи, годится только для употребления письменном виде. Слово elite помогает почувствовать себя особенным. Об этом сообщает "Рамблер".
@@ -15,5 +15,19 @@
         <button class="btn btn-warning">
             To page about us
         </button>
+        {% for value in values %}
+            {% if value == 'hello' %}
+                {% filter upper %}
+                    <p>
+                        {{ value }}
+                    </p>
+                {% endfilter %}
+            {% endif %}
+        {% endfor %}
+        {% for value in obj %}
+            <p>
+                {{ value }}
+            </p>
+        {% endfor %}
     </div>
 {% endblock %}
